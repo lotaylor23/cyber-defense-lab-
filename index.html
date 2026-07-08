@@ -1,1 +1,180 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Defense Lab: Network Under Attack</title>
+
+    <link rel.css
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>🛡️ Cyber Defense Lab</h1>
+        <h2>Network Under Attack</h2>
+    </header>
+
+    <!-- Main Menu -->
+    <section id="mainMenu" class="screen">
+        <h2>Mission Briefing</h2>
+
+        <p>
+            A cyberattack has compromised the district network.
+            Investigate the breach, identify vulnerabilities,
+            contain threats, and secure the network before
+            critical systems are lost.
+        </p>
+
+        <button id="startGameBtn">Start Mission</button>
+    </section>
+
+    <!-- HUD -->
+    <section id="hud" class="hidden">
+
+        <div class="hud-item">
+            <strong>Stage:</strong>
+            <span id="stageName">Cyber Detective</span>
+        </div>
+
+        <div class="hud-item">
+            <strong>Score:</strong>
+            <span id="score">0</span>
+        </div>
+
+        <div class="hud-item">
+            <strong>Timer:</strong>
+            <span id="timer">300</span>
+        </div>
+
+    </section>
+
+    <!-- Story Area -->
+    <section id="storyPanel" class="hidden">
+        <h3 id="storyTitle">Stage 1: Cyber Detective</h3>
+
+        <p id="storyText">
+            Review evidence and determine how the attacker gained access.
+        </p>
+    </section>
+
+    <!-- Main Game Area -->
+    <main id="gameArea" class="hidden">
+
+        <!-- Canvas -->
+        <canvas
+            id="gameCanvas"
+            width="1000"
+            height="600">
+        </canvas>
+
+        <!-- Action Panel -->
+        <aside id="actionPanel">
+
+            <h3>Actions</h3>
+
+            <div id="actionContent">
+
+                <p>
+                    Investigate clues and secure systems to progress.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Stage Controls -->
+    <section id="controls" class="hidden">
+
+        <button id="previousBtn">
+            Previous
+        </button>
+
+        <button id="nextBtn">
+            Next Stage
+        </button>
+
+    </section>
+
+    <!-- Results Screen -->
+    <section id="resultsScreen" class="hidden">
+
+        <h2>Mission Complete</h2>
+
+        <p>
+            The network has been secured.
+        </p>
+
+        <div class="results">
+
+            <p>
+                Final Score:
+                <span id="finalScore">0</span>
+            </p>
+
+            <p>
+                Systems Protected:
+                <span id="protectedSystems">0</span>
+            </p>
+
+            <p>
+                Threats Blocked:
+                <span id="blockedThreats">0</span>
+            </p>
+
+        </div>
+
+        <button onclick="location.reload()">
+            Play Again
+        </button>
+
+    </section>
+
+    <!-- Stage Data -->
+    <script>
+        const stages = [
+            {
+                id: 1,
+                name: "Cyber Detective",
+                description:
+                    "Investigate clues and identify the source of the attack."
+            },
+            {
+                id: 2,
+                name: "Network Map",
+                description:
+                    "Navigate connected systems and trace the attack path."
+            },
+            {
+                id: 3,
+                name: "Threat Response",
+                description:
+                    "Block phishing, malware, and ransomware attacks."
+            },
+            {
+                id: 4,
+                name: "Escape Room",
+                description:
+                    "Solve cybersecurity puzzles to unlock access."
+            },
+            {
+                id: 5,
+                name: "Final Defense",
+                description:
+                    "Stop the network-wide attack before time runs out."
+            }
+        ];
+    </script>
+
+    <!-- Game Scripts -->
+    js/player.js
+    js/map.js
+    js/threats.js
+    js/ui.js
+    js/game.js
+
+</body>
+</html>
