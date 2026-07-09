@@ -248,6 +248,9 @@ nextBtn.addEventListener("click", () => {
         `;
 
         stageName.textContent = "Network Map";
+        loadStage2();
+        return;
+
     }
 
 });
