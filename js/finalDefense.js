@@ -352,6 +352,16 @@ function completeFinalDefense() {
         "protectedSystems"
     ).textContent = "5";
 
+    const playerName =
+    prompt(
+        "Enter your name for the leaderboard:"
+    ) || "Anonymous";
+
+    saveScore(
+        playerName,
+        score
+    );
+    
     setTimeout(() => {
 
         gameArea.classList.add("hidden");
