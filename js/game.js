@@ -1,4 +1,4 @@
-
+console.log("game.js loaded");
 // ==========================================
 // Cyber Defense Lab
 // Stage 1 - Cyber Detective
