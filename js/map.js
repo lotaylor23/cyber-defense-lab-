@@ -253,6 +253,7 @@ function updateMapInstructions() {
         <p>
             Use Left and Right Arrow Keys
             to navigate between systems.
+            You can also click a node to inspect it.
         </p>
 
         <p>
@@ -328,3 +329,35 @@ function loadStage2() {
 
     initializeNetworkMap();
 }
+canvas.addEventListener("click", function(event) {
+
+    if (currentStage !== 2) {
+        return;
+    }
+
+    const rect = canvas.getBoundingClientRect();
+
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+
+    networkNodes.forEach((node, index) => {
+
+        const dx = mouseX - node.x;
+        const dy = mouseY - node.y;
+
+        const distance = Math.sqrt(
+            dx * dx + dy * dy
+        );
+
+        if (distance <= 35) {
+
+            selectedNode = index;
+
+            drawNetworkMap();
+
+            visitNode();
+        }
+    });
+
+});
+
