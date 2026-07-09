@@ -252,5 +252,11 @@ nextBtn.addEventListener("click", () => {
         return;
 
     }
+    if (currentStage === 2) {
+
+        loadStage3();
+
+        return;
+}
 
 });
