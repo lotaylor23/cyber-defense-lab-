@@ -19,4 +19,4 @@ A browser-based cybersecurity learning game.
 
 ## Play Online
 
-https://github.com/lotaylor23/cyber-defense-lab-/
+https://lotaylor23.github.io/cyber-defense-lab-/
