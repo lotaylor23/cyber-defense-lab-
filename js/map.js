@@ -353,9 +353,9 @@ canvas.addEventListener("click", function(event) {
 
             selectedNode = index;
 
+            visitNode();
             drawNetworkMap();
 
-            visitNode();
         }
     });
 
