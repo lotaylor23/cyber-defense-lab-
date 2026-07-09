@@ -342,3 +342,62 @@ button:active {
         align-items: center;
     }
 }
+/* ==========================================
+   Leaderboard
+   ========================================== */
+
+#leaderboard {
+
+    max-width: 1200px;
+
+    margin: 20px auto;
+
+    background: var(--bg-panel);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+#leaderboard h3 {
+
+    color: var(--warning);
+
+    margin-bottom: 15px;
+}
+
+.leaderboard-entry {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    border-radius: 5px;
+
+    background: var(--bg-panel-light);
+}
+
+.rank {
+
+    color: var(--primary);
+
+    font-weight: bold;
+}
+
+.player-name {
+
+    color: white;
+}
+
+.player-score {
+
+    color: var(--secondary);
+
+    font-weight: bold;
+}
