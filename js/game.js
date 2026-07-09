@@ -22,7 +22,7 @@ const scoreDisplay = document.getElementById("score");
 const actionContent = document.getElementById("actionContent");
 
 const nextBtn = document.getElementById("nextBtn");
-
+const previousBtn = document.getElementById("previousBtn");
 let detectiveProgress = {
     source: false,
     vulnerability: false,
@@ -34,6 +34,7 @@ let detectiveProgress = {
 // ==========================================
 
 startButton.addEventListener("click", startGame);
+previousBtn.addEventListener("click", goToPreviousStage);
 
 function startGame() {
     mainMenu.classList.add("hidden");
@@ -279,6 +280,29 @@ nextBtn.addEventListener("click", () => {
 }
 
 });
+
+function goToPreviousStage() {
+
+    switch(currentStage) {
+
+        case 2:
+            loadStage1();
+            break;
+
+        case 3:
+            loadStage2();
+            break;
+
+        case 4:
+            loadStage3();
+            break;
+
+        case 5:
+            loadStage4();
+            break;
+    }
+}
+
 // ==========================================
 // Leaderboard
 // ==========================================
