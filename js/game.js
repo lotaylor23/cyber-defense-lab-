@@ -43,7 +43,14 @@ function startGame() {
     gameArea.classList.remove("hidden");
     controls.classList.remove("hidden");
 
+    document
+        .getElementById("leaderboard")
+        .classList.remove("hidden");
+
+    displayLeaderboard();    
+
     loadStage1();
+   
 }
 
 // ==========================================
