@@ -272,3 +272,83 @@ nextBtn.addEventListener("click", () => {
 }
 
 });
+// ==========================================
+// Leaderboard
+// ==========================================
+
+let leaderboard =
+    JSON.parse(
+        localStorage.getItem("cyberLeaderboard")
+    ) || [];
+function saveScore(playerName, scoreValue) {
+
+    leaderboard.push({
+
+        player: playerName,
+        score: scoreValue,
+
+        date:
+            new Date()
+            .toLocaleDateString()
+
+    });
+
+    leaderboard.sort(
+        (a, b) => b.score - a.score
+    );
+
+    leaderboard = leaderboard.slice(0, 10);
+
+    localStorage.setItem(
+        "cyberLeaderboard",
+        JSON.stringify(leaderboard)
+    );
+
+    displayLeaderboard();
+}
+function displayLeaderboard() {
+
+    const board =
+        document.getElementById(
+            "leaderboardContent"
+        );
+
+    if (!board) return;
+
+    if (leaderboard.length === 0) {
+
+        board.innerHTML =
+            "<p>No scores yet.</p>";
+
+        return;
+    }
+
+    let html = "";
+
+    leaderboard.forEach(
+        (entry, index) => {
+
+            html += `
+
+            <div class="leaderboard-entry">
+
+                <span class="rank">
+                    #${index + 1}
+                </span>
+
+                <span class="player-name">
+                    ${entry.player}
+                </span>
+
+                <span class="player-score">
+                    ${entry.score}
+                </span>
+
+            </div>
+
+            `;
+        }
+    );
+
+    board.innerHTML = html;
+}
