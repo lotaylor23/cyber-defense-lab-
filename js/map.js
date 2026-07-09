@@ -157,6 +157,7 @@ function drawNetworkMap() {
 
     drawConnections();
     drawNodes();
+    drawPlayer();
 }
 
 // ==========================================
