@@ -355,6 +355,9 @@ function completeFinalDefense() {
         "protectedSystems"
     ).textContent = "5";
 
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+
     const playerName =
     prompt(
         "Enter your name for the leaderboard:"
