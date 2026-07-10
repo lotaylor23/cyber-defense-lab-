@@ -283,6 +283,7 @@ function deployDefense(defense) {
 // ==========================================
 
 function completeFinalDefense() {
+    clearInterval(timerInterval);
 
     finalDefenseWon = true;
 
@@ -335,7 +336,9 @@ function completeFinalDefense() {
 
         <p>
             Final Score:
-            <strong>${score}</strong>
+            <strong>${score}</strong> 
+            Bonus points:
+            ${timeRemaining}
         </p>
 
     `;
