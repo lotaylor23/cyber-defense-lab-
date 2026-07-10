@@ -361,7 +361,7 @@ function completeFinalDefense() {
         playerName,
         score
     );
-    
+   
     setTimeout(() => {
 
         gameArea.classList.add("hidden");
