@@ -85,7 +85,8 @@ function startGame() {
 }
 
 function gameOver() {
-
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
     actionContent.innerHTML = `
         <h2 class="danger">
             ⏰ Time Expired
