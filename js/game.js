@@ -31,6 +31,9 @@ let detectiveProgress = {
 let timeRemaining = 300;
 let timerInterval = null;
 
+const bgMusic =
+    document.getElementById("bgMusic");
+
 function startTimer() {
 
     clearInterval(timerInterval);
@@ -61,6 +64,8 @@ startButton.addEventListener("click", startGame);
 previousBtn.addEventListener("click", goToPreviousStage);
 
 function startGame() {
+    bgMusic.volume = 0.4;
+    bgMusic.play();
     mainMenu.classList.add("hidden");
 
     hud.classList.remove("hidden");
