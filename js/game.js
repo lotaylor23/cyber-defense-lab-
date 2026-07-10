@@ -70,6 +70,19 @@ function loadStage1() {
     storyText.textContent =
         "Review the evidence and determine how the attacker gained access.";
 
+    ctx.clearRect(    0,    0,    canvas.width,    canvas.height);
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(    100,    50,    800,    450);
+    ctx.fillStyle = "#000000";
+    ctx.font = "24px Arial";
+    ctx.fillText(    "From: support@secure-school-login.net",    130,    120);
+    ctx.fillText(    "Subject: URGENT PASSWORD RESET",    130,    170);
+    ctx.font = "18px Arial";
+    ctx.fillText(    "Your account has been compromised.",    130,    260);
+    ctx.fillText(    "Click the link below immediately.",    130,    300);
+    ctx.fillStyle = "red";
+    ctx.fillText(    "http://secure-school-reset.net",    130,    360);
+    
     actionContent.innerHTML = `
 
         <h3>Evidence File</h3>
