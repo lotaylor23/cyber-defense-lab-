@@ -28,6 +28,30 @@ let detectiveProgress = {
     vulnerability: false,
     prevention: false
 };
+let timeRemaining = 300;
+let timerInterval = null;
+
+function startTimer() {
+
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
+
+        timeRemaining--;
+
+        document.getElementById("timer")
+            .textContent = timeRemaining;
+
+        if (timeRemaining <= 0) {
+
+            clearInterval(timerInterval);
+
+            gameOver();
+        }
+
+    }, 1000);
+
+}
 
 // ==========================================
 // Start Game
@@ -51,7 +75,31 @@ function startGame() {
     displayLeaderboard();    
 
     loadStage1();
+    startTimer();
    
+}
+
+function gameOver() {
+
+    actionContent.innerHTML = `
+        <h2 class="danger">
+            ⏰ Time Expired
+        </h2>
+
+        <p>
+            The network was compromised before
+            defenses could be deployed.
+        </p>
+
+        <button onclick="location.reload()">
+            Try Again
+        </button>
+    `;
+
+    gameArea.classList.add("hidden");
+
+    nextBtn.disabled = true;
+    previousBtn.disabled = true;
 }
 
 // ==========================================
